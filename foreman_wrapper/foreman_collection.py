@@ -53,7 +53,10 @@ class ForemanCollection(object):
         :type search_attr: str
         """
         self.collection_name = collection_name
-        self.collection = getattr(self.foreman_api, self.collection_name, None)
+        if self.collection_name:
+            self.collection = getattr(
+                self.foreman_api, self.collection_name, None
+            )
         if self.collection and not search_attr:
             self.search_attr = config.COLLECTION_D[
                 self.collection_name
