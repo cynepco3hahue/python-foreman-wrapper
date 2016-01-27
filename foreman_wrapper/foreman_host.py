@@ -55,9 +55,9 @@ class ForemanHost(ForemanCollection):
                        build = bool
                        managed = bool
         """
-        mac_address = kwargs.pop(
-            "mac", self.host.network.get_mac_by_ip(self.host.ip)
-        )
+        mac_address = kwargs.pop("mac", None)
+        if not mac_address:
+            mac_address = self.host.network.get_mac_by_ip(self.host.ip)
         host_d = {
             "name": self.host.fqdn,
             "mac": mac_address,
