@@ -21,7 +21,7 @@ setup(
     keywords="foreman",
     url="https://github.com/cynepco3hahue/python-foreman-wrapper",
     platforms=["linux"],
-    packages=["foreman-wrapper"],
+    packages=["foreman_wrapper"],
     long_description=read("README.md"),
     install_requires=["python-foreman", "python-rrmngmnt"],
     classifiers=[
