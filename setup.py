@@ -12,7 +12,7 @@ def read(fname):
     ).read()
 
 setup(
-    name="foreman-wrapper",
+    name="python-foreman-wrapper",
     version="0.1",
     author="Lukianov Artyom",
     author_email="artyom.lukianov@gmail.com",
